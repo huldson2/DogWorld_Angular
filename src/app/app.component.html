@@ -1,24 +1,51 @@
 <div class="wrap">
 
   <header class="header">
-    LOG - TITULO
+
+    <i class="fas fa-dog fa-fw fa-3x" title="Página inicial" routerLink="/"></i>
+    <h1>
+      Dog World
+      <small>Entre Faros e pegadas</small>
+    </h1>
+
+    <div *ngIf="auth.user | async as user; else showLogin">
+      <img src="{{ user.photoURL }}" alt="{{ user.displayName }}" title="Perfil de {{ user.displayName }}." routerLink="/profile">
+    </div>
+
+    <ng-template #showLogin>
+      <button class="center primary" routerLink="/login">
+        <i class="fas fa-sign-in-alt fa-fw"></i>
+        Login
+      </button>
+    </ng-template>
+
   </header>
 
   <nav class="nav">
-    <a routerLink="/home">Início</a>
-    <a routerLink="/noticias">Notícias</a>
-    <a routerLink="/sobre">Sobre</a>
-    <a routerLink="/contatos">Contatos</a>
-
+    <a routerLink="/">
+      <i class="fas fa-home fa-fw"></i> Início
+    </a>
+    <a routerLink="/news">
+      <i class="fas fa-newspaper fa-fw"></i> Notícias
+    </a>
+    <a routerLink="/contacts">
+      <i class="fas fa-comments fa-fw"></i> Contatos
+    </a>
+    <a routerLink="/about">
+      <i class="fas fa-info-circle fa-fw"></i> Sobre
+    </a>
   </nav>
 
-
   <main class="main">
+
     <router-outlet></router-outlet>
+
   </main>
 
-<footer class="footer">
-&copy; 2020 Huldson Rodrigues
+  <footer class="footer">
+    <a routerLink="/"><i class="fas fa-home fa-fw"></i></a>
+    <small>&copy; Copyright 2020 Huldson Rodrigues</small>
+    <a (click)="anchorLink('top')"><i class="far fa-arrow-alt-circle-up fa-fw"></i></a>
+  </footer>
 
-</footer>
 </div>
