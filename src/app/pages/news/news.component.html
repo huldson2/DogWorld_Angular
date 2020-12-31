@@ -1,1 +1,35 @@
-<p>Página de notícias carregada!</p>
+<div class="row">
+
+  <article class="col-left">
+
+    <h2>Notícias Recentes</h2>
+
+    <!-- Aula 11) Exibe somente se já obteve as notícias -->
+    <div *ngIf="newsList" class="news-list">
+
+      <!-- Aula 11) Loop das notícias -->
+      <div *ngFor="let item of newsList" class="news-item">
+
+        <img src="{{ item.urlToImage }}" alt="Não disponível" title="{{ item.title }}">
+        <div>
+          <h4><a href="{{ item.url }}" target="_blank">{{ item.title }}</a></h4>
+          <small *ngIf="item.description === ''">{{ item.content }}</small>
+          <small *ngIf="item.description !== ''">{{ item.description }}</small>
+          <small> &rarr; <a href="http://www.{{ item.source.name }}/" target="_blank">{{ item.source.name }}</a></small>
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+  <aside class="col-right">
+
+    <h3>Sidebar</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloribus incidunt soluta, sequi ab maxime
+      iure veritatis a possimus ut numquam nisi, cumque cupiditate eos. Iusto corporis pariatur ex unde.</p>
+
+  </aside>
+
+</div>
