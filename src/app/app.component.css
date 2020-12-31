@@ -14,11 +14,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: rgba(1, 204, 255, 0.5);
+  background: #6b7a8f;
 }
 
 .header>i {
-  color: black;
+  color: #57544d;
   display: block;
   margin: 1rem;
   -webkit-text-stroke: 1px white;
@@ -26,7 +26,7 @@
 }
 
 .header>i:hover {
-  color: rgb(255, 0, 0);
+  color: #F7882F;
 }
 
 .header h1 {
@@ -73,7 +73,7 @@
 }
 
 .nav {
-  background: #ddd;
+  background: #DCC7AA;
   display: flex;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .nav a:hover, .selected {
-  background: #444;
+  background: #F7882F;
   color: #ddd;
 }
 
@@ -106,7 +106,7 @@
   padding-left: 1rem;
   padding-right: 1rem;
   flex: 1;
-  background: rgba(128, 128, 128, .2);
+  background: rgba(150, 143, 143, 0.2);
 }
 
 .footer {

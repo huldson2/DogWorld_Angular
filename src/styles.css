@@ -4,7 +4,7 @@
     box-sizing: border-box;
     outline: none;
   }
-  
+
   html, body {
     position: relative;
     width: 100%;
@@ -16,21 +16,21 @@
     background: #000;
     color: #dfdfdf;
   }
-  
+
   header, nav, main, aside, footer {
     display: block;
     position: relative;
   }
-  
+
   a {
     color: steelblue;
     text-decoration: none;
   }
-  
+
   a:hover {
     color: orangered;
   }
-  
+
   .row {
     display: flex;
     position: relative;
@@ -39,14 +39,14 @@
     flex-direction: column;
     padding-bottom: 1rem;
   }
-  
+
   .col-right {
     margin-top: 1rem;
     background: rgba(255, 255, 255, .1);
     padding: 0 1rem;
     overflow: hidden;
   }
-  
+
   @media (min-width: 640px) {
     .row {
       flex-direction: row;
@@ -59,15 +59,15 @@
       width: 11rem;
     }
   }
-  
+
   @media (min-width: 768px) {
     .col-right {
       width: 13rem;
     }
   }
-  
+
   /* HTML buttons */
-  
+
   button {
     font-family: inherit;
     font-size: inherit;
@@ -78,32 +78,31 @@
     border-radius: .3rem;
     cursor: pointer;
   }
-  
+
   button.center {
     display: table;
     margin: 1rem auto;
   }
-  
+
   button.block {
     display: block;
     width: 100%;
   }
-  
+
   button.primary {
     background: steelblue;
     color: white;
   }
-  
+
   button.primary:hover {
     background: orangered;
   }
-  
+
   button.primary:disabled {
     background: grey;
     cursor: not-allowed;
   }
-  
+
   .danger {
     color: orangered;
   }
-  
